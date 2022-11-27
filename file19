@@ -1,0 +1,9 @@
+function between(a, b) {
+  let arr = new Array(b - a +1);
+         
+		for (var j = 0; j < arr.length; j++, a++) 
+        {
+			arr[j] = a;
+		}
+      		return arr;
+}
