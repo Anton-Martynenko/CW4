@@ -1,0 +1,15 @@
+function killer(suspectInfo, dead) {
+  let killer = ''
+    let maxDead = 0
+    for ([name, personMet] of Object.entries(suspectInfo)) {
+        let count = 0
+        dead.forEach(victim => {
+            count = (personMet.includes(victim)) ? count + 1 : count
+        });
+        if (count > maxDead) {
+            maxDead = count
+            killer = name
+        }
+    }
+  return killer
+}
