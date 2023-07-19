@@ -1,0 +1,10 @@
+function transposeTwoStrings (array) {
+	let result = [];
+  let maxLength = Math.max(array[0].length, array[1].length);
+  
+  for (let i = 0; i < maxLength; i++) {
+    let iteration = (array[0][i] || " ") + " " + (array[1][i] || " ");
+    result.push(iteration);
+  }  
+  return result.join("\n");
+  }
