@@ -1,0 +1,30 @@
+function solve(arr){
+  let positions = [];
+      
+    const lToCode = (letter) => {
+      return letter.charCodeAt(0);
+    };
+  
+    for (let j = 0; j < arr.length; j++) {
+          let word = 0;    
+      for (let i = 0; i < arr[j].length; i++) {        
+        if (arr[j][i] === arr[j][i].toUpperCase()) {          
+          let y = lToCode(arr[j][i]) - 65;        
+          if (y === i) {            
+             word++
+          } 
+  
+        }        
+        else if (arr[j][i] === arr[j][i].toLowerCase()) {          
+          let y = lToCode(arr[j][i]) - 97;          
+          if (y === i) {             
+            word++ 
+          }
+  
+        }
+        
+      }
+     positions.push(word)
+    }
+    return positions
+};
