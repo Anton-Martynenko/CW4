@@ -1,0 +1,4 @@
+function center (strng, width, fill = ' ') {
+  return strng.length > width ? strng 
+  : fill.repeat(Math.ceil((width - strng.length) / 2)) + strng + fill.repeat(Math.floor((width - strng.length) / 2));
+}
