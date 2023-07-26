@@ -1,0 +1,5 @@
+function battle(x, y) {
+  let xSum = x.split('').map(el => el.charCodeAt() - 64).reduce((a, b) => a + b);
+  let ySum = y.split('').map(el => el.charCodeAt() - 64).reduce((a, b) => a + b);
+  return xSum === ySum ? "Tie!" : xSum > ySum ? x : y; 
+}
