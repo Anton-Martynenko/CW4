@@ -1,0 +1,9 @@
+function tacofy(word) {
+  const ingr = {'t':'tomato','l':'lettuce','c':'cheese','g':'guacamole','s':'salsa',
+  'a':'beef','e':'beef','u':'beef','i':'beef','o':'beef'}
+  const arr = [];
+  word.split('').map(v => arr.push(ingr[v.toLowerCase()]))
+  arr.unshift('shell')
+  arr.push('shell')
+  return arr.filter(el => el === undefined ? null : el)
+}
