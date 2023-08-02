@@ -1,0 +1,4 @@
+function replaceNth(text, n, oldValue, newValue) {
+  let i = 0
+  return n > 0 ? text.replace(new RegExp(oldValue, "g"), s => ++i % n === 0 ? newValue : s) : text;
+}
