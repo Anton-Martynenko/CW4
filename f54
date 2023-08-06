@@ -1,0 +1,5 @@
+function testit(a,b){
+  let newA = a.filter((e, i) => a.indexOf(e) === i);
+  let newB = b.filter((e, i) => b.indexOf(e) === i);
+  return newA.concat(newB).sort((a, b) => a - b);
+}
