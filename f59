@@ -1,0 +1,4 @@
+function checkParity(parity, bin){
+  return parity === "even" ? bin.split("0").join("").split("").length % 2 === 0 ? 0 
+  : 1 : bin.split("0").join("").split("").length % 2 === 0 ? 1 : 0;
+}
