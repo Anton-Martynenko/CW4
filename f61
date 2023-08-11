@@ -1,0 +1,3 @@
+function isDivisible(start, ...finish){
+  return finish.every(n => start % n === 0);
+}
