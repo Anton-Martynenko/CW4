@@ -1,0 +1,11 @@
+function getMean(arr, x, y) {
+  if (x <= 1 || x > arr.length || y <= 1 || y > arr.length || arr.length < 1) {
+    return -1;
+  } else {
+    let mean1 = arr.slice(0, x);
+    let mean2 = arr.slice(-y);
+    let result1 = mean1.reduce((a, b) => a + b) / mean1.length;
+    let result2 = mean2.reduce((a, b) => a + b) / mean2.length;
+    return (result1 + result2) / 2;
+  }
+}
