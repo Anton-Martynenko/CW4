@@ -1,0 +1,3 @@
+function processData(data){
+  return data.reduce((p, el) => p * (el[0] - el[1]), 1)
+}
