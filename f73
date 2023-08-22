@@ -1,0 +1,9 @@
+function squaresNeeded(grains){
+  let s = 0; let k = 0; let x=1;
+ while (s < grains) {
+   s = s + x;
+   x = x*2;
+   k++;
+ }
+  return k;
+}
