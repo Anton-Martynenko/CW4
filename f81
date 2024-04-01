@@ -1,0 +1,19 @@
+function sort(sentence){
+  const wordReg = /\w+/;
+  const isCapitalized = /^[A-Z]/;
+
+  const words = sentence
+    .split(' ')
+    .map(w => wordReg.exec(w)[0])
+    .sort((a, b) => {
+      const aCapital = isCapitalized.test(a);
+      const bCapital = isCapitalized.test(b);
+      if(aCapital !== bCapital) {
+        return aCapital ? 1 : -1;
+      }
+
+      return a.localeCompare(b) * (aCapital ? -1 : 1);
+    })
+
+  return words.join(' ');
+}
