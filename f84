@@ -1,0 +1,3 @@
+function cleverSplit(s){
+  return s.match(/\[![^\]]*\]|\[[^\]]*\]|\S+/g);
+}
