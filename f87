@@ -1,0 +1,8 @@
+function pairOfShoes(shoes) {
+	let p = shoes.reduce(function(p, c) {
+        p[c[1]] = (p[c[1]] || 0) + (c[0]==1 ? 1 : -1);
+        return p;
+    }, {});
+    if (Object.values(p).some(x => x != 0)) { return false }
+    else { return true }; 
+}
