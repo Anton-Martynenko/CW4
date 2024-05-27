@@ -1,0 +1,7 @@
+function pizzaRewards(customers, minOrders, minPrice) {
+  let result = [];
+  for (let i in customers){
+    if (customers[i].filter(v => v >= minPrice).length >= minOrders) result.push(i);
+  }
+  return result;
+}
