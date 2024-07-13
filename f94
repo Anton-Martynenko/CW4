@@ -1,0 +1,11 @@
+function solve(s){
+const BigNumber = require('bignumber.js');
+let arr = [];
+  for (let i = 0; i <= s.length; i++){
+    for (let j = i + 1; j <= s.length; j++){
+      let x = new BigNumber(s.slice(i,j));
+      if (x.modulo(2) * 1 === 1) arr.push(s.slice(i,j))
+    }
+  }
+  return arr.length;
+};
