@@ -1,0 +1,3 @@
+const largestArrangement = array => {
+  return +(array.sort((x, y) => +("" + y + x) - +("" + x + y)).join(''));
+}
