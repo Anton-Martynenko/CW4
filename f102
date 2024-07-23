@@ -1,0 +1,10 @@
+function interpreter(tape, input) {
+  const mem = Array.from(input, Number)
+  for (let pc = 0, sp = 0; sp < mem.length; ++pc) {
+    switch (tape[pc % tape.length]) {
+      case "1": mem[sp] ^= 1; break
+      case "0": sp++; break
+    }
+  }
+  return mem.join("")
+}
