@@ -1,0 +1,3 @@
+const toUnderScore = name => {
+    return name.replace(/(?<=[^_-])_?(?=[A-Z])|(?<=[^\d_])_?(?=\d)/g, "_");
+}
